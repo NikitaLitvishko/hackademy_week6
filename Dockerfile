@@ -7,7 +7,7 @@ FROM node:lts as builder
 WORKDIR /superbase-app
 COPY . .
 COPY --from=dependencies /superbase-app/node_modules ./node_modules
-RUN npm build
+RUN npm run build
 
 FROM node:lts as runner
 WORKDIR /superbase-app
