@@ -10,7 +10,7 @@ COPY --from=dependencies /superbase-app/node_modules ./node_modules
 RUN npm build
 
 FROM node:lts as runner
-WORKDIR /supabase-nextjs
+WORKDIR /superbase-app
 ENV NODE_ENV production
 # If you are using a custom next.config.js file, uncomment this line.
 # COPY --from=builder /superbase-app/next.config.js ./
